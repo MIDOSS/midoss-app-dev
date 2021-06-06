@@ -1,0 +1,31 @@
+# conda environment description file for midoss-app package
+# development environment
+#
+# Create a conda environment for development, testing, and documentation
+# of the midoss-app web app with:
+#
+#    $ cd midoss-app-dev
+#    $ conda env create -f envs/environment-dev.yaml
+#    $ source activate midoss-app-dev
+#    (midoss-app-dev)$ python3 -m pip install --editable .
+
+name: midoss-app-dev
+
+channels:
+  - conda-forge
+  - defaults
+
+dependencies:
+  - pip
+  - python=3.8
+  - pyyaml
+  - requests
+  
+  - pip:
+    - attrs
+    - pyramid
+    - pyramid_debugtoolbar
+    - pyramid_mako
+    - sentry-sdk
+    - supervisor
+    - waitress
