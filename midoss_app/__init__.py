@@ -33,18 +33,17 @@ def main(global_config, **settings):
     _static_views(config, settings)
     _copyright_year_range(config)
     _site_routes(config)
-    _midoss_routes(config)
     _about_site_routes(config)
-    _figure_server(config)
+    _tile_server(config)
     config.scan()
     return config.make_wsgi_app()
 
 
 def _static_views(config, settings):
-    config.add_static_view(name="static", path="midoss-app-dev:static")
+    config.add_static_view(name="static", path="midoss_app:static")
     config.add_static_view(
-        name=settings["midoss_tiles_server_name"],
-        path="/results/midoss-app-dev/tiles",
+        name=settings["tile_server_name"],
+        path="/ocean/bmoorema/research/MEOPAR/midoss-app-old/tiles",
     )
 
 
@@ -63,19 +62,12 @@ def _site_routes(config):
     config.add_route("site.index", "/")
 
 
-def _midoss_routes(config):
-    config.add_route("heading.subheading", "folder/subfolder/{variable}")
-
-
 def _about_site_routes(config):
+    config.add_route("about.project", "project")
     config.add_route("about.contributors", "contributors")
-    config.add_route("about.publications", "publications")
     config.add_route("about.license", "license")
 
+def _tile_server(config):
+    config.add_route("tile", "/*subpath", "midoss_app._tile")
 
-def _figure_server(config):
-    config.add_view("midoss-app-dev._figure", route_name="figure")
-    config.add_route("figure", "/*subpath")
-
-
-_figure = static_view("/var/www/html/midoss-app-dev/figures", use_subpath=True)
+_tile = static_view('tiles', use_subpath=True)

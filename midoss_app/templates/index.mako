@@ -16,9 +16,22 @@
 
 <%block name="title">MIDOSS App (development)</%block>
 
-<div class="container">
+<div class="container-fluid">
   <div class="row">
-    <div class="col-md-2 border" id="maptools"></div>
-    <div class="col-md-10 border" id="map"></div>
+    <div class="col-sm-2" id="maptools">
+      <label for="variable">Variable</label>
+      <select id="variable">
+        <option value="temperature">Temperature</option>
+        <option value="salinity">Salinity</option>
+      </select>
+    </div>
+    <div class="container-fluid">
+      <div class="col-sm-10" id="map"></div>
+    </div>
   </div>
 </div>
+
+<%block name="page_js">
+  <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.5.0/build/ol.js"></script>
+  <script src="${request.static_path("midoss_app:static/js/map.js")}"></script>
+</%block>

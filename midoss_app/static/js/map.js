@@ -4,7 +4,7 @@ var canvas = new ol.source.XYZ({
 });
 
 var data = new ol.source.XYZ({
-    url: "tiles/temperature/{z}/{y}/{x}.png",
+    //url: "tile/temperature/{z}/{y}/{x}.png",
     projection: 'EPSG:3857',
 });
 
@@ -16,15 +16,15 @@ var tilegrid = new ol.source.TileDebug({
 new ol.Map({
     target: 'map',
     layers: [
-	new ol.layer.TileLayer({
+	new ol.layer.Tile({
 	    source: canvas,
 	}),
-	new ol.layer.TileLayer({
+	new ol.layer.Tile({
 	    source: data,
 	}),
-	//new ol.tile.TileLayer({
-	//    source: tilegrid,
-	//}),
+	new ol.layer.Tile({
+	    source: tilegrid,
+	}),
     ],
     view: new ol.View({
 	center: ol.proj.fromLonLat([-124, 49]),
@@ -34,6 +34,5 @@ new ol.Map({
 
 var VariableSelect = document.getElementById('variable');
 VariableSelect.onchange = function () {
-    var new_variable = VariableSelect.value
-    data.setUrl("tiles/"+new_variable+"/{z}/{y}/{x}.png")
+    data.setUrl("tile" + `/${VariableSelect.value}` + "/{z}/{y}/{x}")
 };

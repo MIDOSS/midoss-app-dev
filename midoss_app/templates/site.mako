@@ -24,17 +24,23 @@
   </title>
 
   <link rel="icon"
-        href=${request.static_path("salishsea_site:static/img/MEOPAR_favicon.ico")} >
+        href=${request.static_path("midoss_app:static/img/MEOPAR_favicon.ico")} >
 
   <%block name="site_css">
     <link rel="stylesheet"
-          href=${request.static_path("midoss-app-dev:static/css/bootswatch-3.3.7/superhero/bootstrap.min.css")}>
+          href=${request.static_path("midoss_app:static/css/bootswatch-3.3.7/superhero/bootstrap.min.css")}>
     <link rel="stylesheet"
-          href=${request.static_path("midoss-app-dev:static/css/site.css")}>
+          href=${request.static_path("midoss_app:static/css/site.css")}>
   </%block>
 
   <%block name="page_css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.5.0/css/ol.css" type="text/css">
+    <style>
+      #map {
+      	padding: 0px;
+        height: 600px;
+      }
+    </style>
   </%block>
 
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -81,7 +87,6 @@
   </%block>
 
   <%block name="page_js">
-    <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.5.0/build/ol.js"></script>
     <script>
       function init() { }
     </script>

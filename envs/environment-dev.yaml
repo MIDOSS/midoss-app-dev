@@ -16,10 +16,20 @@ channels:
   - defaults
 
 dependencies:
+  - bottleneck
+  - dask
+  - ipywidgets
+  - matplotlib
+  - netCDF4
+  - pillow
   - pip
+  - pyproj
+  - pyresample
   - python=3.8
   - pyyaml
   - requests
+  - tqdm
+  - xarray
   
   - pip:
     - attrs

@@ -12,29 +12,25 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-"""midoss-app-dev About views
+"""salishsea_site index page view
 """
 import logging
-from pathlib import Path
 
 from pyramid.view import view_config
+from pyramid.response import Response
 
 logger = logging.getLogger(__name__)
 
 
-@view_config(route_name="about.contributors", renderer="about/contributors.mako")
-@view_config(route_name="about.contributors.html", renderer="about/contributors.mako")
-def contributors(request):
+@view_config(route_name="site.index", renderer="index.mako")
+def index(request):
+    """Render site index page."""
     return {}
 
-
-@view_config(route_name="about.publications", renderer="about/publications.mako")
-def publications(request):
-    return {}
-
-
-@view_config(route_name="about.license", renderer="about/license.mako")
-@view_config(route_name="about.license.html", renderer="about/license.mako")
-def license(request):
-    with Path(request.registry.settings["license_file"]).open("rt") as f:
-        return {"license": f.read()}
+@view_config(route_name="tile")
+def tile(request):
+    """Return tile path"""
+    variable, z, y, x = [request.matchdict[key] for key in ('variable', 'z', 'y', 'x')]
+    url = f'tile/{variable}/{z}/{y}/{x}.png'
+    print(url)
+    return Response(url)
