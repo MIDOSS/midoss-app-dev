@@ -34,17 +34,13 @@ def main(global_config, **settings):
     _copyright_year_range(config)
     _site_routes(config)
     _about_site_routes(config)
-    _tile_server(config)
     config.scan()
     return config.make_wsgi_app()
 
 
 def _static_views(config, settings):
     config.add_static_view(name="static", path="midoss_app:static")
-    config.add_static_view(
-        name=settings["tile_server_name"],
-        path="/ocean/bmoorema/research/MEOPAR/midoss-app-old/tiles",
-    )
+    config.add_static_view(name="tiles", path="midoss_app:tiles")
 
 
 def _copyright_year_range(config):
@@ -66,8 +62,3 @@ def _about_site_routes(config):
     config.add_route("about.project", "project")
     config.add_route("about.contributors", "contributors")
     config.add_route("about.license", "license")
-
-def _tile_server(config):
-    config.add_route("tile", "/*subpath", "midoss_app._tile")
-
-_tile = static_view('tiles', use_subpath=True)

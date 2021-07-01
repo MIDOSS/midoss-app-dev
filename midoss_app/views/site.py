@@ -27,10 +27,3 @@ def index(request):
     """Render site index page."""
     return {}
 
-@view_config(route_name="tile")
-def tile(request):
-    """Return tile path"""
-    variable, z, y, x = [request.matchdict[key] for key in ('variable', 'z', 'y', 'x')]
-    url = f'tile/{variable}/{z}/{y}/{x}.png'
-    print(url)
-    return Response(url)
