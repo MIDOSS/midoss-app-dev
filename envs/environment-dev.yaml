@@ -13,7 +13,7 @@ name: midoss-app-dev
 
 channels:
   - conda-forge
-  - defaults
+  - nodefaults
 
 dependencies:
   - bottleneck
@@ -30,7 +30,7 @@ dependencies:
   - requests
   - tqdm
   - xarray
-  
+
   - pip:
     - attrs
     - pyramid
