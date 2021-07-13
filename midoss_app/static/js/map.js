@@ -34,5 +34,5 @@ new ol.Map({
 
 var VariableSelect = document.getElementById('variable');
 VariableSelect.onchange = function () {
-    data.setUrl("tiles" + `/${VariableSelect.value}` + "/{z}/{y}/{x}.png")
+    data.setUrl("tiles/" + VariableSelect.value + "/{z}/{y}/{x}.png");
 };
