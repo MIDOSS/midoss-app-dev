@@ -17,14 +17,9 @@
 __version__ = "1.0.dev0"
 
 import datetime
-import os
 
-import sentry_sdk
 from pyramid.config import Configurator
 from pyramid.static import static_view
-from sentry_sdk.integrations.pyramid import PyramidIntegration
-
-sentry_sdk.init(dsn=os.environ.get("SENTRY_DSN"), integrations=[PyramidIntegration()])
 
 
 def main(global_config, **settings):
