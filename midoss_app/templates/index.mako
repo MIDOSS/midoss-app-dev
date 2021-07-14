@@ -21,8 +21,15 @@
     <div class="col-sm-2" id="maptools">
       <label for="variable">Variable</label>
       <select id="variable">
-        <option value="temperature">Temperature</option>
-        <option value="salinity">Salinity</option>
+	<option value="surfacepresence">Surface Presence</option>
+	<option value="watercolumnpresence">Water Column Presence</option>
+	<option value="surfaceconcentration">Surface Concentration</option>
+      </select>
+      <label for="oiltype">Oil Type</label>
+      <select id="oiltype">
+        <option value="all">All Types</option>
+	<option value="bunker">Bunker-C</option>
+        <option value="diesel">Diesel</option>
       </select>
     </div>
     <div class="container-fluid">

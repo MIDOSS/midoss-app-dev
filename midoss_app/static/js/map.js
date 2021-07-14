@@ -8,10 +8,10 @@ var data = new ol.source.XYZ({
     projection: 'EPSG:3857',
 });
 
-var tilegrid = new ol.source.TileDebug({
-    tileGrid: canvas.getTileGrid(),
-    projection: 'EPSG:3857',
-});
+//var tilegrid = new ol.source.TileDebug({
+//    tileGrid: canvas.getTileGrid(),
+//    projection: 'EPSG:3857',
+//});
 
 new ol.Map({
     target: 'map',
@@ -22,9 +22,9 @@ new ol.Map({
 	new ol.layer.Tile({
 	    source: data,
 	}),
-	new ol.layer.Tile({
-	    source: tilegrid,
-	}),
+	//new ol.layer.Tile({
+	//    source: tilegrid,
+	//}),
     ],
     view: new ol.View({
 	center: ol.proj.fromLonLat([-124, 49]),
@@ -34,5 +34,10 @@ new ol.Map({
 
 var VariableSelect = document.getElementById('variable');
 VariableSelect.onchange = function () {
-    data.setUrl("tiles/" + VariableSelect.value + "/{z}/{y}/{x}.png");
+    data.setUrl("tiles" + `/${VariableSelect.value}` + `/${OiltypeSelect.value}` + "/{z}/{y}/{x}.png")
+};
+
+var OiltypeSelect = document.getElementById('oiltype');
+OiltypeSelect.onchange = function () {
+    data.setUrl("tiles" + `/${VariableSelect.value}` + `/${OiltypeSelect.value}` + "/{z}/{y}/{x}.png")
 };
