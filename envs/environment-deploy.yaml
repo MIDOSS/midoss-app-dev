@@ -1,0 +1,24 @@
+# conda environment description file for midoss-app package deployment environment
+#
+# Create a conda environment for deployment of the midoss-app web app with:
+#
+#    $ cd midoss-app-dev
+#    $ conda env create -f envs/environment-deploy.yaml
+#    $ conda activate midoss-app-dev
+#    (midoss-app-dev)$ python3 -m pip install --editable .
+
+name: midoss-app-env
+
+channels:
+  - conda-forge
+  - nodefaults
+
+dependencies:
+  - pip
+  - python=3.9
+
+  - pip:
+    - pyramid
+    - pyramid_mako
+    - rutter
+    - waitress
