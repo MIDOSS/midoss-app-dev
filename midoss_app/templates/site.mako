@@ -38,7 +38,7 @@
     <style>
       #map {
       	padding: 0px;
-        height: 600px;
+        height: 700px;
       }
     </style>
   </%block>
@@ -61,15 +61,12 @@
   <div class="container">
     <p>
       © Copyright ${request.copyright_years}
-      <a href="https://github.com/SalishSeaCast/docs/blob/master/CONTRIBUTORS.rst">
+      <a href=${request.route_url('about.contributors')}>
         MIDOSS Project Contributors
       </a> and The University of British Columbia
       <br>
       Licensed under the Apache License, Version 2.0.
       <a href="https://www.apache.org/licenses/LICENSE-2.0">https://www.apache.org/licenses/LICENSE-2.0</a>.
-      <br>
-      Please acknowledge our work by using one or more of
-      <a href="https://github.com/SalishSeaCast/docs/blob/master/CITATION.rst">these citations</a>.
     </p>
   </div>
 </footer>

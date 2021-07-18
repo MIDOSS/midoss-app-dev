@@ -56,4 +56,5 @@ def _site_routes(config):
 def _about_site_routes(config):
     config.add_route("about.project", "project")
     config.add_route("about.contributors", "contributors")
+    config.add_route("about.partners", "partners")
     config.add_route("about.license", "license")

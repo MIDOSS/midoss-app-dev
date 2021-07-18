@@ -38,9 +38,11 @@
             <ul class="dropdown-menu" role="menu">
 	      <li><a href=${request.route_url('about.project')}>Project</a></li>
               <li><a href=${request.route_url('about.contributors')}>Contributors</a></li>
+	      <li><a href=${request.route_url('about.partners')}>Partners</a></li>
               <li><a href=${request.route_url('about.license')}>License</a></li>
             </ul>
           </li>
+	  <li class="dropdown"><a href="#">Methodology</a></li>
         </ul>
       </div>
     </div>

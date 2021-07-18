@@ -20,29 +20,33 @@
   <div class="row">
     <div class="col-md-12">
       <h1>Contributors</h1>
-      <p>
-        The MIDOSS visualization app is the product of research conducted in
-        the Mesoscale Ocean and Atmospheric Dynamics (MOAD) group lead by
-        <a href="https://www.eoas.ubc.ca/~sallen/">Susan Allen</a>
-        in the Department of Earth, Ocean and Atmospheric Sciences
-        at the University of British Columbia.
-      </p>
-      <p>People who have contributed to this site:</p>
+      <hr/>
+      <h3>Team Leaders</h3>
       <ul>
-        <li>Susan Allen &lt;<a href="mailto:sallen@eoas.ubc.ca">sallen@eoas.ubc.ca</a>&gt;</li>
-	<li>Stephanie Chang &lt;<a href="mailto:stephanie.chang@ubc.ca">stephanie.chang@ubc.ca</a>&gt;</li>
-	<li>Haibo Niu &lt;<a href="mailto:haibo.niu@dal.ca">haibo.niu@dal.ca</a>&gt;</li>
-	<li>Rachael Mueller &lt;<a href="mailto:rmueller@eoas.ubc.ca">rmueller@eoas.ubc.ca</a>&gt;</li>
-	<li>Doug Latornell &lt;<a href="mailto:dlatornell@eoas.ubc.ca">dlatornell@eoas.ubc.ca</a>&gt;</li>
-	<li>Cameron Power &lt;<a href="mailto:cameron.a.power@gmail.com">cameron.a.power@gmail.com</a>&gt;</li>
-        <li>Ben Moore-Maley &lt;<a href="mailto:bmoorema@eoas.ubc.ca">bmoorema@eoas.ubc.ca</a>&gt;</li>
-	<li>Xiaomei Zhong &lt;<a href="mailto:xm976877@dal.ca">xm976877@dal.ca</a>&gt;</li>
-	<li>Ryah Rondolo lt;<a href="mailto:ryahrondolo@gmail.com">ryahrondolo@gmail.com</a>&gt;</li>
-	<li>Krista Forysinski &lt;<a href="mailto:kristacawley@gmail.com">kristacawley@gmail.com</a>&gt;</li>
-	<li>Shihan Li &lt;<a href="mailto:sh987503@dal.ca">sh987503@dal.ca</a>&gt;</li>
-	<li>Leni Vespaziani &lt;<a href="mailto:lenives@mail.ubc.ca">lenives@mail.ubc.ca</a>&gt;</li>
-	<li>Ashutosh Bhudia &lt;<a href="mailto:">abhudia@oas.ubc.ca</a>&gt;</li>
-        <li>Vicky Do &lt;<a href="mailto:vdo@eos.ubc.ca">vdo@eos.ubc.ca</a>&gt;</li>
+        <li><strong>Susan Allen</strong> (<em>Principal Investigator</em>), Professor, Department of Earth, Ocean and Atmospheric Sciences (EOAS), UBC &lt;<a href="mailto:sallen@eoas.ubc.ca">sallen@eoas.ubc.ca</a>&gt;</li>
+	<li><strong>Stephanie Chang</strong>, Professor, School of Community and Regional Planning (SCARP), UBC &lt;<a href="mailto:stephanie.chang@ubc.ca">stephanie.chang@ubc.ca</a>&gt;</li>
+	<li><strong>Haibo Niu</strong>, Professor, Department of Engineering, Dalhousie University &lt;<a href="mailto:haibo.niu@dal.ca">haibo.niu@dal.ca</a>&gt;</li>
+	<li><strong>Rachael Mueller</strong>, Postdoctoral Fellow, EOAS, UBC &lt;<a href="mailto:rmueller@eoas.ubc.ca">rmueller@eoas.ubc.ca</a>&gt;</li>
+	<li><strong>Doug Latornell</strong>, Research Software Engineer, EOAS, UBC &lt;<a href="mailto:dlatornell@eoas.ubc.ca">dlatornell@eoas.ubc.ca</a>&gt;</li>
+      </ul>
+      <hr/>
+      <h3>Current Team Members</h3>
+      <ul>
+        <li>Ben Moore-Maley, Graduate Student, EOAS, UBC</li>
+	<li>Cameron Power, Graduate Student, SCARP, UBC</li>
+	<li>Serena Choi, Graduate Student, SCARP, UBC</li>
+	<li>Xiaomei Zhong, Graduate Student, Engineering, Dalhousie</li>
+      </ul>
+      <hr/>
+      <h3>Past Contributors</h3>
+      <ul>
+	<li>Ryah Rondolo</li>
+	<li>Krista Forysinski</li>
+	<li>Shihan Li</li>
+	<li>Leni Vespaziani</li>
+	<li>Ashutosh Bhudia</li>
+        <li>Vicky Do</li>
+	<li>Casey Hilliard</li>
       </ul>
     </div>
   </div>

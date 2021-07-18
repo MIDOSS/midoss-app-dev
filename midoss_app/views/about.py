@@ -31,6 +31,11 @@ def contributors(request):
     return {}
 
 
+@view_config(route_name="about.partners", renderer="about/partners.mako")
+def partners(request):
+    return {}
+
+
 @view_config(route_name="about.license", renderer="about/license.mako")
 def license(request):
     with Path(request.registry.settings["license_file"]).open("rt") as f:
