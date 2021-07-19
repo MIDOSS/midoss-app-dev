@@ -32,11 +32,12 @@
         <div class="form-group collapse in" id="midoss-selection">
           <label class="form-label" for="variable">Variable</label>
           <select class="form-control" id="variable">
-      	    <option value="VTE">Vessel Time Exposure</option>
-	    <option value="spillmap">Spill Map</option>
 	    <option value="surfaceconcentration">Surface Concentration</option>
-	    <option value="surfacepresence">Surface Presence</option>
-	    <option value="watercolumnpresence">Water Column Presence</option>
+	    <option value="surfacepresence">Surface Probability</option>
+	    <option value="watercolumnpresence">Water Column Probability</option>
+	    <option value="beachingconcentration">Beaching Concentration</option>
+	    <option value="beachingpresence">Beaching Probability</option>
+	    <option value="beachingtime">Time to Beaching</option>
           </select>
           <label class="form-label" for="oiltype">Oil Type</label>
           <select class="form-control" id="oiltype">
@@ -44,18 +45,7 @@
 	    <option value="bunker">Bunker-C</option>
             <option value="diesel">Diesel</option>
           </select>
-          <label class="form-label" for="threshold">Presence Threshold</label>
-          <select class="form-control" id="threshold">
-            <option value="000l">0.0 L/cell</option>
-	    <option value="001l">0.1 L/cell</option>
-	    <option value="010l">1.0 L/cell</option>
-	    <option value="100l">10.0 L/cell</option>
-          </select>
 	</div>
-	<div class="form-check">
-	  <input class="form-check-input" type="checkbox" value="" checked="" id="terminals-layer">
-          <label class="form-check-label" for="terminals-layer">Marine Terminals Layer</label>
-        </div>
       </fieldset>
       <div>
 	<hr/>
