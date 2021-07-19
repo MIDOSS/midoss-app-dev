@@ -20,16 +20,20 @@ var topo = new ol.layer.Tile({
 //    }),
 //});
 
-var data = new ol.source.XYZ({
+var datasource = new ol.source.XYZ({
     projection: 'EPSG:3857',
 });
+
+var data = new ol.layer.Tile({
+    source: datasource,
+})
 
 new ol.Map({
     target: 'map',
     layers: [
 	canvas,
 	topo,
-	new ol.layer.Tile({source: data}),
+	data,
     ],
     controls: ol.control.defaults().extend([new ol.control.ScaleLine()]),
     view: new ol.View({
@@ -38,18 +42,38 @@ new ol.Map({
     }),
 });
 
-var VariableSelect = document.getElementById('variable');
-VariableSelect.onchange = function () {
-    data.setUrl("tiles" + `/${VariableSelect.value}` + `/${OiltypeSelect.value}` + "/{z}/{y}/{x}.png")
-};
-
-var OiltypeSelect = document.getElementById('oiltype');
-OiltypeSelect.onchange = function () {
-    data.setUrl("tiles" + `/${VariableSelect.value}` + `/${OiltypeSelect.value}` + "/{z}/{y}/{x}.png")
-};
-
+// -- Identify selection objects --
+// Layers
 var TopoSelect = document.getElementById('topo-layer');
+var DataSelect = document.getElementById('midoss-layer');
+
+// Data categories
+var VariableSelect = document.getElementById('variable');
+var OiltypeSelect = document.getElementById('oiltype');
+
+// -- Initialize selections --
+// Layers
+canvas.setVisible(!TopoSelect.checked)
+topo.setVisible(TopoSelect.checked)
+data.setVisible(DataSelect.checked)
+
+// Data source
+datasource.setUrl("tiles" + `/${VariableSelect.value}` + `/${OiltypeSelect.value}` + "/{z}/{y}/{x}.png")
+
+// -- Handle changes --
+// Layers
 TopoSelect.onchange = function () {
     canvas.setVisible(!TopoSelect.checked)
     topo.setVisible(TopoSelect.checked)
+};
+DataSelect.onchange = function () {
+    data.setVisible(DataSelect.checked)
+};
+
+// Data categories
+VariableSelect.onchange = function () {
+    datasource.setUrl("tiles" + `/${VariableSelect.value}` + `/${OiltypeSelect.value}` + "/{z}/{y}/{x}.png")
+};
+OiltypeSelect.onchange = function () {
+    datasource.setUrl("tiles" + `/${VariableSelect.value}` + `/${OiltypeSelect.value}` + "/{z}/{y}/{x}.png")
 };

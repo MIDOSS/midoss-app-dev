@@ -22,14 +22,14 @@
       <fieldset>
         <legend class="m-0">Data Explorer</legend>
 	<div class="form-check">
-          <input class="form-check-input" type="checkbox" value="" id="topo-layer">
+          <input class="form-check-input" type="checkbox" value="" checked="" id="topo-layer">
           <label class="form-check-label" for="topo-layer">Topography Layer</label>
         </div>
 	<div class="form-check">
-          <input class="form-check-input" type="checkbox" id="midoss-layer" data-toggle="collapse" data-target="#midoss-selection">
+          <input class="form-check-input" type="checkbox" value="" checked="" id="midoss-layer" data-toggle="collapse" data-target="#midoss-selection">
           <label class="form-check-label" for="midoss-layer">Oil Spill Products Layer</label>
         </div>
-        <div class="form-group" id="midoss-selection">
+        <div class="form-group collapse in" id="midoss-selection">
           <label class="form-label" for="variable">Variable</label>
           <select class="form-control" id="variable">
       	    <option value="VTE">Vessel Time Exposure</option>
@@ -51,17 +51,9 @@
 	    <option value="010l">1.0 L/cell</option>
 	    <option value="100l">10.0 L/cell</option>
           </select>
-	  <label class="form-label" for="elapsedtime">Elapsed Time</label>
-          <select class="form-control" id="elapsedtime">
-            <option value="1d">1 d</option>
-            <option value="2d">2 d</option>
-            <option value="3d">3 d</option>
-            <option value="5d">5 d</option>
-	    <option value="7d">7 d</option>
-          </select>
 	</div>
 	<div class="form-check">
-	  <input class="form-check-input" type="checkbox" value="" id="terminals-layer">
+	  <input class="form-check-input" type="checkbox" value="" checked="" id="terminals-layer">
           <label class="form-check-label" for="terminals-layer">Marine Terminals Layer</label>
         </div>
       </fieldset>
